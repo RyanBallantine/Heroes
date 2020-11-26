@@ -15,7 +15,7 @@
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run angular.io-example:server:production",
-    "start:capsule": "node dist/server",
+    "start:capsule": "node ./dist/server",
     "postinstall": "ngcc npm run build:ssr"
   },
   "private": true,
