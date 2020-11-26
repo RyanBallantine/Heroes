@@ -6,16 +6,17 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng run angular.io-example:server:production",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "dev:ssr": "ng run angular.io-example:serve-ssr",
-    "serve:ssr": "node dist/angular.io-example/server/main.js",
-    "build:ssr": "ng build --prod && ng run angular.io-example:server:production",
-    "prerender": "ng run angular.io-example:prerender",
-    "start:capsule": "node dist/angular.io-example/server",
-    "postinstall": "ngcc"
+    "serve:ssr": "node dist/server",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
+    "build:client-and-server-bundles": "ng build --prod && ng run angular.io-example:server:production --bundleDependencies all",
+    "start:capsule": "node dist/server",
+    "postinstall": "npm run builf:ssr"
   },
   "private": true,
   "dependencies": {
