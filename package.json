@@ -15,7 +15,8 @@
     "build:ssr": "ng build --prod && ng run angular.io-example:server:production",
     "prerender": "ng run angular.io-example:prerender",
     "start:capsule": "node dist/server",
-    "postinstall": "npm run build:ssr"
+    "postinstall": "npm run build:ssr",
+    "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript"
   },
   "private": true,
   "dependencies": {
