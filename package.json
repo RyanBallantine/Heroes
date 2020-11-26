@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod && ng run angular.io-example:server:production",
+    "build": "ng run angular.io-example:server",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
