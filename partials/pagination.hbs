@@ -1,0 +1,9 @@
+<nav class="pagination_purus" role="navigation">
+    {{#if prev}}
+        <a class="newer-posts" href="{{page_url prev}}"><i class="fa fa-arrow-left"></i><span>{{t "Newer Posts"}}</span></a>
+    {{/if}}
+    <span class="page-number">{{t "Page"}} {{page}} {{t "of"}} {{pages}}</span>
+    {{#if next}}
+        <a class="older-posts" href="{{page_url next}}"><span>{{t "Older Posts"}}</span><i class="fa fa-arrow-right"></i></a>
+    {{/if}}
+</nav>

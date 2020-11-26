@@ -1,0 +1,31 @@
+
+{{#if @labs.members}}
+<div class="subscribe-wp">
+<h6>{{t "Subscribe to"}} {{@site.title}}</h6>
+<div class="inner-subscribe_purus">
+    <form data-members-form="subscribe" onsubmit="subscribeFunction()" class="sub-form">
+
+        <div class="form-group{{#if error}} error{{/if}}">
+            <input id="userEmail" type="email" class="subscribe-email" data-members-email
+                placeholder="{{t "Enter your e-mail..."}}" autocomplete="false" />
+
+        </div>
+
+        <button type="submit"><span>{{t "Subscribe"}}</span></button>
+        {{! This is used to get extra info about where this subscriber came from }}
+        {{script}}
+    </form>
+    <div id="confirmMsg" class="message-success" style="display:none;">
+        <strong>{{t "Great!"}} </strong>{{t "Check your inbox and click the link to confirm your subscription."}}
+    </div>
+    <div id="errorMsg" class="message-error" style="display:none;">
+        {{t "Please enter a valid email address!"}}
+    </div>
+    {{#if error}}
+    <p class="main-error">{{{error.message}}}</p>
+    {{/if}}
+    
+</div>
+<button  onclick="closeSubscribeFunction()" class="btn-close"><i class="fa fa-close"></i></button>
+</div>
+{{/if}}
