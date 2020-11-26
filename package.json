@@ -6,14 +6,16 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng run angular.io-example:server",
+    "build": "ng run angular.io-example:server:production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run angular.io-example:serve-ssr",
     "serve:ssr": "node dist/angular.io-example/server/main.js",
     "build:ssr": "ng build --prod && ng run angular.io-example:server:production",
-    "prerender": "ng run angular.io-example:prerender"
+    "prerender": "ng run angular.io-example:prerender",
+    "start:capsule": "node dist/server",
+    "postinstall": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
