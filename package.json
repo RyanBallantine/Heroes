@@ -14,7 +14,7 @@
     "serve:ssr": "node dist/angular.io-example/server/main.js",
     "build:ssr": "ng build --prod && ng run angular.io-example:server:production",
     "prerender": "ng run angular.io-example:prerender",
-    "start:capsule": "node dist/server",
+    "start:capsule": "node dist/angular.io-example/server",
     "postinstall": "ngcc"
   },
   "private": true,
